@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problems We Fix - Thendral Electronics</title>
+    <meta
+      name="description"
+      content="We fix all AC, Fridge, Washing Machine, TV & RO problems. Cooling issues, noise, water leakage, electrical problems & more."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .active-link {
+        color: #3b82f6;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header & Navigation -->
+    <header
+      class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-2 shadow-lg sticky top-0 z-50"
+    >
+      <nav class="container mx-auto px-4">
+        <div class="flex items-center justify-between py-4">
+          <!-- LEFT : Logo + Brand (grouped) -->
+          <div class="flex items-center gap-3">
+            <!-- Logo -->
+            <a
+              href="index.html"
+              class="flex items-center overflow-hidden rounded-full"
+            >
+              <img
+                src="images/WhatsApp Image 2025-12-28 at 15.19.54.jpeg"
+                alt="Thendral Electronics Logo"
+                class="h-12 md:h-14 rounded-full object-cover"
+              />
+            </a>
+            <!-- Brand Name -->
+            <div class="h-12 w-auto overflow-hidden flex items-center">
+              <img
+                src="images/brand3.png"
+                alt="Thendral Electronics"
+                class="h-60 w-auto transition-transform duration-300 ease-out hover:scale-150"
+              />
+            </div>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="index.html"
+              class="text-gray-700 hover:text-blue-600 transition"
+              >Home</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-700 hover:text-blue-600 transition"
+              >Services</a
+            >
+            <a
+              href="problems.html"
+              class="text-gray-700 hover:text-blue-600 transition active-link"
+              >Problems</a
+            >
+            <a
+              href="terms.html"
+              class="text-gray-700 hover:text-blue-600 transition"
+              >Terms</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-700 hover:text-blue-600 transition"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden text-gray-700 focus:outline-none"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
+          <a
+            href="index.html"
+            class="block py-2 text-gray-700 hover:text-blue-600"
+            >Home</a
+          >
+          <a
+            href="services.html"
+            class="block py-2 text-gray-700 hover:text-blue-600"
+            >Services</a
+          >
+          <a
+            href="problems.html"
+            class="block py-2 text-gray-700 hover:text-blue-600 active-link"
+            >Problems</a
+          >
+          <a
+            href="terms.html"
+            class="block py-2 text-gray-700 hover:text-blue-600"
+            >Terms</a
+          >
+          <a
+            href="contact.html"
+            class="block py-2 text-gray-700 hover:text-blue-600"
+            >Contact</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="bg-blue-600 text-white py-12">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">⚠️ Problems We Fix</h1>
+        <p class="text-xl text-blue-100">
+          Comprehensive solutions for all appliance issues
+        </p>
+      </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-4 max-w-6xl">
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Cooling Problems -->
+          <div
+            class="bg-white rounded-lg shadow-md p-6 border-l-4 border-blue-600"
+          >
+            <div class="flex items-center mb-4">
+              <div class="bg-blue-100 p-3 rounded-lg mr-3">
+                <svg
+                  class="w-8 h-8 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 2v20m8-10H4"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-800">Cooling Problems</h3>
+            </div>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <span class="text-blue-600 mr-2">✓</span>
+                <span class="text-gray-700">No cooling</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-600 mr-2">✓</span>
+                <span class="text-gray-700">Low cooling</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-600 mr-2">✓</span>
+                <span class="text-gray-700">Intermittent cooling</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-600 mr-2">✓</span>
+                <span class="text-gray-700">AC turns off automatically</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Noise Issues -->
+          <div
+            class="bg-white rounded-lg shadow-md p-6 border-l-4 border-red-600"
+          >
+            <div class="flex items-center mb-4">
+              <div class="bg-red-100 p-3 rounded-lg mr-3">
+                <svg
+                  class="w-8 h-8 text-red-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-800">Noise Issues</h3>
+            </div>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">✓</span>
+                <span class="text-gray-700">Loud noise</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">✓</span>
+                <span class="text-gray-700">Vibration sound</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">✓</span>
+                <span class="text-gray-700">Fan noise</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">✓</span>
+                <span class="text-gray-700">Unusual clicking sounds</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Water Leakage -->
+          <div
+            class="bg-white rounded-lg shadow-md p-6 border-l-4 border-cyan-600"
+          >
+            <div class="flex items-center mb-4">
+              <div class="bg-cyan-100 p-3 rounded-lg mr-3">
+                <svg
+                  class="w-8 h-8 text-cyan-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-800">Water Leakage</h3>
+            </div>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <span class="text-cyan-600 mr-2">✓</span>
+                <span class="text-gray-700">Indoor water dripping</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-cyan-600 mr-2">✓</span>
+                <span class="text-gray-700">Drain pipe blockage</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-cyan-600 mr-2">✓</span>
+                <span class="text-gray-700">Water leakage into room</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-cyan-600 mr-2">✓</span>
+                <span class="text-gray-700">Condensation problems</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Electrical & Control -->
+          <div
+            class="bg-white rounded-lg shadow-md p-6 border-l-4 border-yellow-600"
+          >
+            <div class="flex items-center mb-4">
+              <div class="bg-yellow-100 p-3 rounded-lg mr-3">
+                <svg
+                  class="w-8 h-8 text-yellow-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-800">
+                Electrical & Control
+              </h3>
+            </div>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <span class="text-yellow-600 mr-2">✓</span>
+                <span class="text-gray-700">AC not turning on</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-yellow-600 mr-2">✓</span>
+                <span class="text-gray-700">Remote not working</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-yellow-600 mr-2">✓</span>
+                <span class="text-gray-700">Error codes (E1, E2, F1)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-yellow-600 mr-2">✓</span>
+                <span class="text-gray-700">MCB tripping</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Gas & Compressor -->
+          <div
+            class="bg-white rounded-lg shadow-md p-6 border-l-4 border-purple-600"
+          >
+            <div class="flex items-center mb-4">
+              <div class="bg-purple-100 p-3 rounded-lg mr-3">
+                <svg
+                  class="w-8 h-8 text-purple-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-800">Gas & Compressor</h3>
+            </div>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <span class="text-purple-600 mr-2">✓</span>
+                <span class="text-gray-700">Gas leakage</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-purple-600 mr-2">✓</span>
+                <span class="text-gray-700">Low gas pressure</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-purple-600 mr-2">✓</span>
+                <span class="text-gray-700">Compressor not working</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-purple-600 mr-2">✓</span>
+                <span class="text-gray-700">Compressor overheating</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Airflow & Health -->
+          <div
+            class="bg-white rounded-lg shadow-md p-6 border-l-4 border-green-600"
+          >
+            <div class="flex items-center mb-4">
+              <div class="bg-green-100 p-3 rounded-lg mr-3">
+                <svg
+                  class="w-8 h-8 text-green-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-800">Airflow & Health</h3>
+            </div>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2">✓</span>
+                <span class="text-gray-700">Dirty filters</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2">✓</span>
+                <span class="text-gray-700">Uneven cooling</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2">✓</span>
+                <span class="text-gray-700">Bad smell</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2">✓</span>
+                <span class="text-gray-700">Fungus / dust smell</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2">✓</span>
+                <span class="text-gray-700">Allergy issues</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Problems -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4 max-w-6xl">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+          Other Common Issues We Handle
+        </h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+            <h4 class="font-bold text-lg mb-3 text-gray-800">
+              🧊 Refrigerator Issues
+            </h4>
+            <ul class="space-y-2 text-gray-700">
+              <li>• Freezer not freezing</li>
+              <li>• Ice buildup</li>
+              <li>• Door seal problems</li>
+              <li>• Temperature fluctuation</li>
+              <li>• Light not working</li>
+            </ul>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+            <h4 class="font-bold text-lg mb-3 text-gray-800">
+              🧺 Washing Machine Issues
+            </h4>
+            <ul class="space-y-2 text-gray-700">
+              <li>• Not draining water</li>
+              <li>• Door won't open/close</li>
+              <li>• Not spinning</li>
+              <li>• Excessive vibration</li>
+              <li>• Error codes display</li>
+            </ul>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+            <h4 class="font-bold text-lg mb-3 text-gray-800">📺 TV Issues</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li>• Screen flickering</li>
+              <li>• Lines on screen</li>
+              <li>• No power</li>
+              <li>• Poor picture quality</li>
+              <li>• HDMI not working</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-blue-600 text-white py-16">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Facing Any Appliance Problem?
+        </h2>
+        <p class="text-xl mb-8 text-blue-100">
+          Our expert technicians are ready to help you
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="contact.html"
+            class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg inline-block"
+          >
+            Book Service Now
+          </a>
+          <a
+            href="#"
+            id="whatsapp-btn"
+            class="bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition shadow-lg inline-block"
+          >
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <h3 class="font-bold text-lg mb-4">Thendral Electronics</h3>
+            <p class="text-gray-400">Home Appliances Sales & Service</p>
+            <p class="text-gray-400 mt-2">
+              Reliable doorstep service for all your home appliances.
+            </p>
+          </div>
+          <div>
+            <h3 class="font-bold text-lg mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-gray-400 hover:text-white transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-white transition"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="problems.html"
+                  class="text-gray-400 hover:text-white transition"
+                  >Problems We Fix</a
+                >
+              </li>
+              <li>
+                <a
+                  href="terms.html"
+                  class="text-gray-400 hover:text-white transition"
+                  >Terms & Conditions</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-400 hover:text-white transition"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold text-lg mb-4">Contact Info</h3>
+            <p class="text-gray-400 mb-2">📞 +91 919876543210</p>
+            <p class="text-gray-400 mb-2">📧 erodethendral@gmail.com</p>
+            <p class="text-gray-400 mb-4">🕒 Mon - Sat: 8 AM - 8 PM</p>
+            <a
+              href="https://wa.me/919876543210"
+              class="bg-green-500 text-white px-4 py-2 rounded inline-block hover:bg-green-600 transition"
+              >WhatsApp Us</a
+            >
+          </div>
+        </div>
+        <div class="border-t border-gray-700 pt-8 text-center">
+          <p class="text-gray-400">
+            &copy; 2025 Thendral Electronics. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
