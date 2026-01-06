@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     btn.addEventListener("click", function (e) {
       e.preventDefault();
       // Replace with actual WhatsApp number (remove spaces and add country code)
-      const phoneNumber = "9186086030340"; // Replace XXXXXXXXXX with actual number
+      const phoneNumber = "918608603034"; // Replace XXXXXXXXXX with actual number
       const message = encodeURIComponent(
         "Hi, I need home appliance service. Please help me."
       );
