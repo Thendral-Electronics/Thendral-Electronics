@@ -57,8 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  /* Final, page-specific reset for the homepage Services section.
-     This intentionally overrides accidental circular/positioned styles. */
+  /* Homepage Services layout reset. */
   const servicesHeading = Array.from(document.querySelectorAll("h2")).find(
     (el) => el.textContent.trim() === "Our Services"
   );
@@ -71,14 +70,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const style = document.createElement("style");
     style.id = "homepage-services-final-fix";
     style.textContent = `
-      body {
-        overflow-x: hidden !important;
-      }
-
-      body::before,
-      body::after,
-      #homepage-services::before,
-      #homepage-services::after {
+      body { overflow-x: hidden !important; }
+      body::before, body::after, #homepage-services::before, #homepage-services::after {
         content: none !important;
         display: none !important;
         background: none !important;
@@ -87,7 +80,6 @@ document.addEventListener("DOMContentLoaded", function () {
         clip-path: none !important;
         mask: none !important;
       }
-
       #homepage-services {
         position: relative !important;
         display: block !important;
@@ -105,7 +97,6 @@ document.addEventListener("DOMContentLoaded", function () {
         background-image: none !important;
         box-shadow: none !important;
       }
-
       #homepage-services > div {
         position: relative !important;
         width: 100% !important;
@@ -114,7 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
         margin-right: auto !important;
         transform: none !important;
       }
-
       #homepage-services .services-grid {
         position: relative !important;
         display: grid !important;
@@ -130,7 +120,6 @@ document.addEventListener("DOMContentLoaded", function () {
         border-radius: 0 !important;
         clip-path: none !important;
       }
-
       #homepage-services .services-grid > div {
         position: relative !important;
         display: block !important;
@@ -143,12 +132,36 @@ document.addEventListener("DOMContentLoaded", function () {
         border-radius: 0.5rem !important;
         box-sizing: border-box !important;
       }
-
       @media (min-width: 768px) {
-        #homepage-services .services-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-        }
+        #homepage-services .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
       }
+    `;
+    document.head.appendChild(style);
+  }
+
+  /* Services page emergency reset. Removes any oversized decorative/absolute
+     layer and forces the appliance sections back into normal document flow. */
+  if (currentPage === "services.html") {
+    const style = document.createElement("style");
+    style.id = "services-page-emergency-fix";
+    style.textContent = `
+      html, body { width: 100% !important; max-width: 100% !important; overflow-x: hidden !important; }
+      body { margin: 0 !important; background: #f8fafc !important; }
+      body .absolute { display: none !important; }
+      body section, body section > div, body section ul, body section li {
+        transform: none !important; clip-path: none !important; mask: none !important; -webkit-mask: none !important;
+      }
+      body section {
+        position: relative !important; width: 100% !important; max-width: 100% !important; min-width: 0 !important; overflow: visible !important;
+      }
+      body section > div {
+        width: auto !important; max-width: 1024px !important; margin-left: auto !important; margin-right: auto !important; box-sizing: border-box !important;
+      }
+      body section ul {
+        display: grid !important; grid-template-columns: repeat(1, minmax(0, 1fr)) !important; gap: 0.75rem !important; width: 100% !important; box-sizing: border-box !important;
+      }
+      @media (min-width: 768px) { body section ul { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } }
+      body section li { width: 100% !important; max-width: 100% !important; min-width: 0 !important; box-sizing: border-box !important; }
     `;
     document.head.appendChild(style);
   }
