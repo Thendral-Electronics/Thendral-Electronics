@@ -33,8 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
   whatsappButtons.forEach((btn) => {
     btn.addEventListener("click", function (e) {
       e.preventDefault();
-      // Replace with actual WhatsApp number (remove spaces and add country code)
-      const phoneNumber = "918608603034"; // Replace XXXXXXXXXX with actual number
+      const phoneNumber = "918608603034";
       const message = encodeURIComponent(
         "Hi, I need home appliance service. Please help me."
       );
@@ -53,30 +52,16 @@ document.addEventListener("DOMContentLoaded", function () {
       const appliance = document.getElementById("appliance").value;
       const problem = document.getElementById("problem").value;
 
-      // Validate mobile number
       if (mobile.length !== 10 || !/^\d{10}$/.test(mobile)) {
         alert("Please enter a valid 10-digit mobile number");
         return;
       }
 
-      // Show success message
       alert(
         `Thank you, ${name}!\n\nYour service request for ${appliance} has been received.\n\nWe will contact you shortly on ${mobile}.\n\nProblem: ${problem}`
       );
 
-      // Reset form
       bookingForm.reset();
-
-      // Optionally, redirect to WhatsApp
-      const phoneNumber = "918608603034"; // Replace with actual number
-      const whatsappMessage = encodeURIComponent(
-        `New Service Booking:\nName: ${name}\nMobile: ${mobile}\nAppliance: ${appliance}\nProblem: ${problem}`
-      );
-
-      // Uncomment to auto-redirect to WhatsApp
-      // setTimeout(() => {
-      //     window.open(`https://wa.me/${phoneNumber}?text=${whatsappMessage}`, '_blank');
-      // }, 1000);
     });
   }
 
@@ -92,4 +77,80 @@ document.addEventListener("DOMContentLoaded", function () {
       link.classList.add("active-link");
     }
   });
+
+  // Emergency layout fix for the Services page.
+  // The live page has previously picked up an oversized decorative/absolute
+  // element that pushes the service content into a narrow column. Remove
+  // that class of layout interference and force normal document flow.
+  if (currentPage === "services.html") {
+    const style = document.createElement("style");
+    style.id = "services-page-emergency-fix";
+    style.textContent = `
+      html, body {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+      }
+
+      body {
+        margin: 0 !important;
+        background: #f8fafc !important;
+      }
+
+      /* Remove any oversized decorative layer causing the white oval. */
+      body .absolute {
+        display: none !important;
+      }
+
+      /* Do not allow transforms/clipping to distort the service content. */
+      body section,
+      body section > div,
+      body section ul,
+      body section li {
+        transform: none !important;
+        clip-path: none !important;
+        mask: none !important;
+        -webkit-mask: none !important;
+      }
+
+      body section {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        overflow: visible !important;
+      }
+
+      body section > div {
+        width: auto !important;
+        max-width: 1024px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        box-sizing: border-box !important;
+      }
+
+      /* Ensure the service feature lists remain real responsive grids. */
+      body section ul {
+        display: grid !important;
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+        gap: 0.75rem !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+
+      @media (min-width: 768px) {
+        body section ul {
+          grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        }
+      }
+
+      body section li {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+      }
+    `;
+    document.head.appendChild(style);
+  }
 });
